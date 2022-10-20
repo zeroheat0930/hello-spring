@@ -18,6 +18,7 @@ public class MemoryMemberRepository implements MemberRepository{
 
     @Override
     public Optional<Member> findById(Long id) {
+
         return Optional.ofNullable(store.get(id)); //널반환 박기위해 옵셔널.오프 널에블 씀
     }
 
@@ -30,6 +31,11 @@ public class MemoryMemberRepository implements MemberRepository{
 
     @Override
     public List<Member> findAll() {
-        return new ArrayList<>(store.values()); //store.member들을 반환
+        return new ArrayList<>(
+                store.values()); //store.member들을 반환
+    }
+
+    public void clearStore(){
+        store.clear();
     }
 }
