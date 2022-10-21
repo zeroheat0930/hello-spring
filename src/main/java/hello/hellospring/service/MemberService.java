@@ -9,12 +9,12 @@ import java.util.List;
 import java.util.Optional;
 
 
-@Service
+
 public class MemberService {
 //ctrl+shift+t <-테스트 케이스 바로가기
     private final MemberRepository memberRepository;
 
-    @Autowired
+
     public MemberService(MemberRepository memberRepository) {
 
         this.memberRepository = memberRepository;
