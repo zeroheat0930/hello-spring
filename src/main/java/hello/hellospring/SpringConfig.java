@@ -36,9 +36,10 @@ public class SpringConfig {
     }
 //    @Bean
 //    public MemberRepository memberRepository() {
-//// return new MemoryMemberRepository();
-////        return new JdbcMemberRepository(dataSource);
-////        return new JdbcTemplateMemberRepository(dataSource); //jdbc 조립할때 다 여기서 하면됨
-//        return new JpaMemberRepository(em);
+// return new MemoryMemberRepository(); //그냥 DB연동전에 임시로 스프링안에서 굴리도록 사용
+//        return new JdbcMemberRepository(dataSource); //순수JDBC 사용
+//       return new JdbcTemplateMemberRepository(dataSource); //jdbc template 사용
+//        return new JpaMemberRepository(em); //jpa사용
+    // 그후 jpa + 스프링데이터는 인터페이스에서 다 알아서 해줘서 repository 필요가없음
 //    }
 }
